@@ -1,0 +1,112 @@
+body{
+    font-family: Arial;
+    font-size: 1em;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    perspective: 900px;
+    position: relative;
+}
+.carusel{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -50px;
+    transform-style: preserve-3d;
+    transform: rotate3d(1,0,0, 0deg);
+    -webkit-animation-name: 'carusel';
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    animation-name: 'carusel';
+    animation-duration: 20s;
+    animation-timing-function: easy-in-out;
+    
+}
+.side{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #677b6d;
+    transform-style: preserve-3d;
+}
+.side1{
+    transform: translateZ(300px);
+}
+.side2{
+    transform:  rotatex(40deg) translateZ(300px);
+}
+.side3{
+    transform:  rotatex(80deg) translateZ(300px);
+}
+.side4{
+    transform:  rotatex(120deg) translateZ(300px);
+}
+.side5{
+    
+    transform:  rotatex(160deg) translateZ(300px);
+}
+
+.side6{
+    transform: rotatex(200deg) translateZ(300px);
+}
+.side7{
+    background: rgba(0, 169, 111, 0.65);
+    transform: rotatex(240deg)translateZ(300px);
+}
+.side8{
+    transform:  rotatex(280deg)translateZ(300px);
+}
+.side9{
+    transform:  rotatex(320deg)translateZ(300px);
+}
+.frame{
+    width: 150px;
+    height: 150px;
+}
+@keyframes 'carusel' {
+    from {
+    transform: rotate3d(1,0,0,0deg);
+    }
+    50% {
+    transform: rotate3d(1,0,0,-180deg);
+    }
+    to {
+    transform: rotate3d(1,0,0,-360deg);
+    }  
+}
+@-webkit-keyframes 'carusel' {
+ from {
+    transform: rotate3d(1,0,0, 0deg);
+    }
+    50% {
+    transform: rotate3d(1,0,0,-180deg);
+    }
+    to {
+    transform: rotate3d(1,0,0,-360deg);
+    }  
+}
+.side:hover{
+	width:250px;
+	height:250px;
+	margin-left:-50px;
+}
+.frame:hover{
+	width:250px;
+	height:250px;
+}
+/*.carusel:hover{
+    animation: none;
+    transform: rotate3d(0,1,0,0deg);
+
+}*/
